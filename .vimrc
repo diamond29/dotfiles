@@ -454,3 +454,5 @@ noremap <Right> <NOP>
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+noremap ; :
