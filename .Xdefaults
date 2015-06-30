@@ -67,5 +67,3 @@ URxvt.pointerBlank:         true
 *.color14:      #5dcc85
 *.color7:       #bccae2
 *.color15:      #dce9ff
-
-URxvt.perl-lib: ~/.urxvt/ext/
