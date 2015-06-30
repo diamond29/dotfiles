@@ -1,0 +1,10 @@
+[user]
+	email = gregdiamond29@gmail.com
+  name = Greg Diamond
+
+[diff]
+  tool = meld
+[pager]
+	diff = false
+[difftool]
+	prompt = false
