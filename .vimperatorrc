@@ -2,3 +2,5 @@
 :noremap k 3k
 :noremap h 3h
 :noremap l 3l
+
+:set hintchars=jkl;asdfhgrtuyvbnmcei
