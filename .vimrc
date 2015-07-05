@@ -454,3 +454,6 @@ noremap <Right> <NOP>
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+let mapleader = ","
+nmap <leader>nt :NERDTree<cr>
