@@ -3,4 +3,5 @@
 :noremap h 3h
 :noremap l 3l
 
+:noremap <C-w> <Nop>
 :set hintchars=jkl;asdfhgrtuyvbnmcei
