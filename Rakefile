@@ -19,7 +19,7 @@ def handle_special_case(file_dir)
   if file_dir == '.i3' && ubuntu?
     FileUtils.cp_r(file_dir, File.expand_path("~/"))
     config_file = File.expand_path('~/.i3/config')
-    IO.write(config_file, IO.read(config_file).gsub("urxvt -cd \"`xcwd`\"", "gnome_terminal --working-directory=`xcwd`"))
+    IO.write(config_file, IO.read(config_file).gsub("urxvt -cd \"`xcwd`\"", "gnome-terminal --working-directory=`xcwd`"))
     true
   else
     false
