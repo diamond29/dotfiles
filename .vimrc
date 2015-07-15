@@ -457,4 +457,5 @@ set expandtab
 
 let mapleader = ","
 nmap <leader>nt :NERDTree<cr>
-nnoremap <CR> :noh<CR><CR>
+noremap <CR> :noh<CR><CR>
+let g:NERDTreeMapQuit = ''
