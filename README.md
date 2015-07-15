@@ -1,2 +1,2 @@
-# greg_dev_stuff
+# dotfiles
 Development configurations for vim etc
