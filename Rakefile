@@ -2,7 +2,7 @@ require 'rake'
 require 'fileutils'
 
 desc "Set up a linux machine to match greg's configurations"
-task :default => [:move_dot_files]
+task :default => [:install_pyenv, :move_dot_files]
 
 desc "Move all dot files to home dir"
 task :move_dot_files do
@@ -11,6 +11,12 @@ task :move_dot_files do
       FileUtils.cp_r(file, File.expand_path("~/"))
     end
   end
+end
+
+desc "Install pyenv for python"
+task :install_pyenv do
+  sh "curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | (export USE_HTTPS=true && bash)"
+  sh "pyenv update"
 end
 
 def handle_special_case(file_dir)
