@@ -106,15 +106,6 @@ set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
 
-"" Fix backspace indent
-set backspace=indent,eol,start
-
-"" Tabs. May be overriten by autocmd rules
-set tabstop=4
-set softtabstop=0
-set shiftwidth=4
-set expandtab
-
 "" Map leader to ,
 let mapleader=','
 
@@ -309,7 +300,6 @@ augroup END
 "" make/cmake
 augroup vimrc-make-cmake
   autocmd!
-  autocmd FileType make setlocal noexpandtab
   autocmd BufNewFile,BufRead CMakeLists.txt setlocal filetype=cmake
 augroup END
 
@@ -338,19 +328,11 @@ nnoremap <leader>ss :SaveSession
 nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSession<CR>
 
-"" Tabs
-"nnoremap <Tab> gt
-"nnoremap <S-Tab> gT
-"nnoremap <silent> <S-t> :tabnew<CR>
-
 "" Set working directory
 nnoremap <leader>. :lcd %:p:h<CR>
 
 "" Opens an edit command with the path of the currently edited file filled in
 noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-"" Opens a tab edit command with the path of the currently edited file filled
-noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 "" ctrlp.vim
 set wildmode=list:longest,list:full
@@ -395,9 +377,7 @@ if has('macunix')
 endif
 
 "" Buffer nav
-noremap <leader>z :bp<CR>
 noremap <leader>q :bp<CR>
-noremap <leader>x :bn<CR>
 noremap <leader>w :bn<CR>
 
 "" Close buffer
@@ -418,12 +398,6 @@ noremap ,o :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=lin
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
-
-augroup vimrc-ruby
-  autocmd!
-  autocmd BufNewFile,BufRead *.rb,*.rbw,*.gemspec setlocal filetype=ruby
-  autocmd Filetype ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
-augroup END
 
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
@@ -455,7 +429,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-let mapleader = ","
 nmap <leader>nt :NERDTree<cr>
-noremap <CR> :noh<CR><CR>
 let g:NERDTreeMapQuit = ''
+
+execute pathogen#infect()
