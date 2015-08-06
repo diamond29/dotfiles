@@ -431,5 +431,6 @@ set expandtab
 
 nmap <leader>nt :NERDTree<cr>
 let g:NERDTreeMapQuit = ''
+au BufNewFile,BufRead *.es6 set filetype=javascript
 
 execute pathogen#infect()
