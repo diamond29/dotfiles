@@ -23,6 +23,7 @@ desc "Install node/npm"
 task :install_npm do
   fail "Not implemented for non-ubuntu" unless ubuntu?
   sh "sudo apt-get install -y nodejs npm"
+  sh "sudo ln -s /usr/bin/nodejs /usr/bin/node"
   sh "npm install -g bower"
 end
 

@@ -89,4 +89,6 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+export PATH="$PATH:$HOME/bin/"
+
 source $HOME/.zshrc.local
