@@ -2,7 +2,7 @@ require 'rake'
 require 'fileutils'
 
 desc "Set up a linux machine to match greg's configurations"
-task :default => [:install_pyenv, :move_dot_files]
+task :default => [:install_pyenv, :install_npm, :move_dot_files]
 
 desc "Move all dot files to home dir"
 task :move_dot_files do
@@ -17,6 +17,12 @@ desc "Install pyenv for python"
 task :install_pyenv do
   sh "curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | (export USE_HTTPS=true && bash)"
   sh "pyenv update"
+end
+
+desc "Install node/npm"
+task :install_npm do
+  fail "Not implemented for non-ubuntu" unless ubuntu?
+  sh "sudo apt-get install -y nodejs npm"
 end
 
 def handle_special_case(file_dir)
