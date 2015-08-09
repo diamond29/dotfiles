@@ -2,7 +2,7 @@ require 'rake'
 require 'fileutils'
 
 desc "Set up a linux machine to match greg's configurations"
-task :default => [:install_pyenv, :install_npm, :move_dot_files]
+task :default => [:install_pyenv, :install_npm, :install_vim, :move_dot_files]
 
 desc "Move all dot files to home dir"
 task :move_dot_files do
@@ -25,6 +25,13 @@ task :install_npm do
   sh "sudo apt-get install -y nodejs npm"
   sh "sudo ln -s /usr/bin/nodejs /usr/bin/node"
   sh "npm install -g bower"
+end
+
+desc "Install vim"
+task :install_vim do
+  if ubuntu?
+    sh "sudo apt-get install -y vim.gnome"
+  end
 end
 
 def handle_special_case(file_dir)
