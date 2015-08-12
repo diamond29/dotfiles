@@ -448,4 +448,8 @@ map <C-p> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 set splitright
 
+" See tabs
+set list
+set listchars=tab:>\ 
+
 execute pathogen#infect()
