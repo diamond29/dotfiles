@@ -450,6 +450,6 @@ set splitright
 
 " See tabs
 set list
-set listchars=tab:>\ 
+set listchars=tab:▸\ 
 
 execute pathogen#infect()
