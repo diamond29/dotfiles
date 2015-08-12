@@ -421,16 +421,29 @@ if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
+""Disable arrow keys to encourage vim style navigation
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+" The previous tab stuff was not being used correctly, so this is hardcoded
+" here
 set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" Open nerd tree with hotkey
 nmap <leader>nt :NERDTree<cr>
+
+" Stop nerd tree from quitting when pressing q, was getting annoying with other
+" keybindings from i3
 let g:NERDTreeMapQuit = ''
+
+" Treat es6 files like js files for purpose of rails asset pipeline
 au BufNewFile,BufRead *.es6 set filetype=javascript
+
+" Open tag definition in a vertical split
+map <C-p> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 execute pathogen#infect()
