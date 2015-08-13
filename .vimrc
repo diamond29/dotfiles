@@ -429,9 +429,9 @@ noremap <Right> <NOP>
 
 " The previous tab stuff was not being used correctly, so this is hardcoded
 " here
-set tabstop=2
-set shiftwidth=2
-set expandtab
+" set tabstop=2
+" set shiftwidth=2
+" set expandtab
 
 " Open nerd tree with hotkey
 nmap <leader>nt :NERDTree<cr>
