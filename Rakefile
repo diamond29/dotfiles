@@ -22,15 +22,15 @@ end
 desc "Install node/npm"
 task :install_npm do
   fail "Not implemented for non-ubuntu" unless ubuntu?
-  sh "sudo apt-get install -y nodejs npm"
+  sh "sudo apt-get install -y nodejs"
   sh "sudo ln -s /usr/bin/nodejs /usr/bin/node"
-  sh "npm install -g bower"
+  sh "sudo npm install -g bower"
 end
 
 desc "Install vim"
 task :install_vim do
   if ubuntu?
-    sh "sudo apt-get install -y vim.gnome"
+    sh "sudo apt-get install -y vim-gnome"
   end
 end
 
