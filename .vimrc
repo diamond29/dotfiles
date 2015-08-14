@@ -452,4 +452,7 @@ set splitright
 set list
 set listchars=tab:▸\ 
 
+" ignore build artifacts in nerd tree
+let NERDTreeIgnore = ['\.o$']
+
 execute pathogen#infect()
