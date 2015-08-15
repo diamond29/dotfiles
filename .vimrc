@@ -82,7 +82,9 @@ NeoBundle "tpope/vim-projectionist"
 NeoBundle "thoughtbot/vim-rspec"
 NeoBundle "majutsushi/tagbar"
 
+" Greg's added bundles
 NeoBundle 'schickling/vim-bufonly'
+NeoBundle 'mileszs/ack.vim'
 
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.local.bundles"))
