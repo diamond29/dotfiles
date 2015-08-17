@@ -1,8 +1,11 @@
 require 'rake'
 require 'fileutils'
 
-desc "Set up a linux machine to match greg's configurations"
-task :default => [:install_pyenv, :install_npm, :install_vim, :move_dot_files]
+desc "Just move dot files"
+task :default => :move_dot_files
+
+desc "Install all tools"
+task :install_tools => [:install_pyenv, :install_npm, :install_vim]
 
 desc "Move all dot files to home dir"
 task :move_dot_files do
