@@ -19,9 +19,9 @@ if !filereadable(neobundle_readme)
   let g:not_finsh_neobundle = "yes"
 
   " Run shell script if exist on custom select language
-  
+
   silent !\curl -sSL https://raw.githubusercontent.com/avelino/vim-bootstrap/master/vim_template/langs/ruby/ruby.sh | bash -s stable
-  
+
 endif
 
 " Required:
@@ -457,5 +457,14 @@ set listchars=tab:▸\
 
 " ignore build artifacts in nerd tree
 let NERDTreeIgnore = ['\.o$']
+
+" change cmdline to match bash shell
+cnoremap <C-P> <Up>
+cnoremap <C-N> <Down>
+cnoremap <C-A> <Home>
+cnoremap <C-F> <Right>
+cnoremap <C-B> <Left>
+cnoremap <Esc>b <S-Left>
+cnoremap <Esc>f <S-Right>
 
 execute pathogen#infect()
