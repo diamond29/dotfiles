@@ -11,4 +11,4 @@
 [push]
   default = simple
 [merge]
-  default = vimdiff
+  tool = vimdiff
