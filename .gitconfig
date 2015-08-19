@@ -1,12 +1,14 @@
 [user]
-	email = gregdiamond29@gmail.com
+  email = gregdiamond29@gmail.com
   name = Greg Diamond
 
 [diff]
-  tool = meld
+  tool = vimdiff
 [pager]
-	diff = false
+  diff = false
 [difftool]
-	prompt = false
+  prompt = false
 [push]
-	default = simple
+  default = simple
+[merge]
+  default = vimdiff
