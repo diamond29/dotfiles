@@ -467,4 +467,6 @@ cnoremap <C-B> <Left>
 cnoremap <Esc>b <S-Left>
 cnoremap <Esc>f <S-Right>
 
+set updatetime=500
+
 execute pathogen#infect()
