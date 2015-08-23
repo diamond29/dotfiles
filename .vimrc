@@ -86,6 +86,7 @@ NeoBundle "majutsushi/tagbar"
 NeoBundle 'schickling/vim-bufonly'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-sleuth'
+NeoBundle 'rking/ag.vim'
 
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.local.bundles"))
@@ -243,7 +244,7 @@ cnoreabbrev Qall qall
 
 "" NERDTree configuration
 let g:NERDTreeChDirMode=2
-let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
+let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__', '\.o$']
 let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
@@ -252,10 +253,6 @@ let g:NERDTreeWinSize = 32
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 noremap <F3> :NERDTreeToggle<CR>
-
-" grep.vim
-nnoremap <silent> <leader>f :Rgrep<CR>
-let Grep_Default_Options = '-IR'
 
 " vimshell.vim
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
@@ -363,7 +360,6 @@ let g:syntastic_style_warning_symbol = '⚠'
 let g:syntastic_auto_loc_list=1
 let g:syntastic_aggregate_errors = 1
 
-
 "" Copy/Paste/Cut
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
@@ -430,12 +426,6 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-" The previous tab stuff was not being used correctly, so this is hardcoded
-" here
-" set tabstop=2
-" set shiftwidth=2
-" set expandtab
-
 " Open nerd tree with hotkey
 nmap <leader>nt :NERDTree<cr>
 
@@ -454,9 +444,6 @@ set splitright
 " See tabs
 set list
 set listchars=tab:▸\ 
-
-" ignore build artifacts in nerd tree
-let NERDTreeIgnore = ['\.o$']
 
 " change cmdline to match bash shell
 cnoremap <C-P> <Up>
