@@ -375,9 +375,6 @@ if has('macunix')
   vmap <C-c> :w !pbcopy<CR><CR>
 endif
 
-"" Buffer nav
-noremap <leader>q :bp<CR>
-noremap <leader>w :bn<CR>
 
 "" Close buffer
 noremap <leader>c :bd<CR>
@@ -456,8 +453,11 @@ cnoremap <Esc>f <S-Right>
 
 set updatetime=500
 
+" Quicker quit commands
 noremap qq :q<CR>
 noremap QQ :qa<CR>
 
-execute pathogen#infect()
+" Save things more quickly
+noremap <leader>w :w<CR>
 
+execute pathogen#infect()
