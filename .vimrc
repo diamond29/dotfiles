@@ -469,8 +469,8 @@ cnoremap <Esc>f <S-Right>
 
 set updatetime=500
 
-noremap qq :qa<CR>
-noremap QQ :qa!<CR>
+noremap qq :q<CR>
+noremap QQ :qa<CR>
 
 execute pathogen#infect()
 
