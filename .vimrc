@@ -87,6 +87,7 @@ NeoBundle 'schickling/vim-bufonly'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'rking/ag.vim'
+NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
 
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.local.bundles"))
@@ -456,6 +457,8 @@ set updatetime=500
 " Quicker quit commands
 noremap qq :q<CR>
 noremap QQ :qa<CR>
+
+noremap q <NOP>
 
 " Save things more quickly
 noremap <leader>w :w<CR>
