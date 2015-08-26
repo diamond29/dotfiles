@@ -11,7 +11,9 @@ desc "Move all dot files to home dir"
 task :move_dot_files do
   Dir.glob('.*').each do |file|
     unless ignored_file?(file) || handle_special_case(file)
-      FileUtils.cp_r(file, File.expand_path("~/"))
+      destination = File.expand_path("~/#{file}")
+      FileUtils.rm_rf destination if File.exists?(destination) || Dir.exists?(destination)
+      File.symlink(File.expand_path(file), destination)
     end
   end
 end
