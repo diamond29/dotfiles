@@ -461,6 +461,6 @@ noremap QQ :qa<CR>
 noremap q <NOP>
 
 " Save things more quickly
-noremap <leader>w :w<CR>
+noremap <leader>w :redraw!<CR>redraw!<CR>
 
 execute pathogen#infect()
