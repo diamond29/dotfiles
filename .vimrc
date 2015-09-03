@@ -464,3 +464,5 @@ noremap q <NOP>
 noremap <leader>w :redraw!<CR>:w<CR>
 
 execute pathogen#infect()
+
+au VimEnter * NERDTree
