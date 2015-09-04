@@ -418,7 +418,7 @@ if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
-""Disable arrow keys to encourage vim style navigation
+" Disable arrow keys to encourage vim style navigation
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
@@ -469,5 +469,7 @@ if &diff
   "setup vimdiff
 else
   "setup non-vimdiff
-  au VimEnter * NERDTree
+  if 0 == argc()
+    au VimEnter * NERDTree
+  endif
 endif
