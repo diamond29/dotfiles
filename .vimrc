@@ -465,4 +465,9 @@ noremap <leader>w :redraw!<CR>:w<CR>
 
 execute pathogen#infect()
 
-au VimEnter * NERDTree
+if &diff
+  "setup vimdiff
+else
+  "setup non-vimdiff
+  au VimEnter * NERDTree
+endif
