@@ -88,6 +88,7 @@ NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
+NeoBundle 'tpope/vim-bundler'
 
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.local.bundles"))
