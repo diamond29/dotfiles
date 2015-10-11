@@ -41,19 +41,10 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'sheerun/vim-polyglot'
-NeoBundle 'vim-scripts/grep.vim'
 NeoBundle 'vim-scripts/CSApprox'
 NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'Shougo/vimproc.vim', {
-      \ 'build' : {
-      \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
 if v:version > 702
-	NeoBundle 'Shougo/vimshell.vim'
+  NeoBundle 'Shougo/vimshell.vim'
 endif
 
 "" Vim-Session
@@ -84,15 +75,13 @@ NeoBundle "majutsushi/tagbar"
 
 " Greg's added bundles
 NeoBundle 'schickling/vim-bufonly'
-NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'rking/ag.vim'
-NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
 
 "" Include user's extra bundle
-if filereadable(expand("~/.vimrc.local.bundles"))
-  source ~/.vimrc.local.bundles
-endif
+"if filereadable(expand("~/.vimrc.local.bundles"))
+"  source ~/.vimrc.local.bundles
+"endif
 
 call neobundle#end()
 
@@ -209,7 +198,7 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 
 if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
+  let g:airline_symbols = {}
 endif
 
 if !exists('g:airline_powerline_fonts')
@@ -401,15 +390,15 @@ nmap <silent> <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 let g:tagbar_type_ruby = {
-    \ 'kinds' : [
-        \ 'm:modules',
-        \ 'c:classes',
-        \ 'd:describes',
-        \ 'C:contexts',
-        \ 'f:methods',
-        \ 'F:singleton methods'
-    \ ]
-\ }
+      \ 'kinds' : [
+      \ 'm:modules',
+      \ 'c:classes',
+      \ 'd:describes',
+      \ 'C:contexts',
+      \ 'f:methods',
+      \ 'F:singleton methods'
+      \ ]
+      \ }
 
 
 
