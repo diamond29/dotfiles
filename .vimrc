@@ -407,12 +407,6 @@ if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
-" Disable arrow keys to encourage vim style navigation
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
 " Open nerd tree with hotkey
 nmap <leader>nt :NERDTree<cr>
 
@@ -462,3 +456,5 @@ else
     au VimEnter * NERDTree
   endif
 endif
+
+set mouse=a
