@@ -64,3 +64,8 @@ URxvt.pointerBlank:         true
 *.color14:      #5dcc85
 *.color7:       #bccae2
 *.color15:      #dce9ff
+
+URxvt.perl-ext-common: font-size
+
+URxvt.keysym.C-Down: perl:font-size:decrease
+URxvt.keysym.C-Up:font-size:increase
