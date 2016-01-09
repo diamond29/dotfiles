@@ -418,7 +418,7 @@ let g:NERDTreeMapQuit = ''
 au BufNewFile,BufRead *.es6 set filetype=javascript
 
 " Open tag definition in a vertical split
-map <C-p> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+map <leader>[ :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 set splitright
 
