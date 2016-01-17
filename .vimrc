@@ -426,7 +426,6 @@ set splitright
 " See tabs
 set list
 set listchars=tab:▸\ 
-set tabstop=4
 autocmd BufNewFile,BufRead *.go set nolist
 
 " change cmdline to match bash shell
