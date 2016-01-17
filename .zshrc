@@ -49,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler archlinux rake-fast vi-mode)
+plugins=(git bundler archlinux rake-fast)
 
 # User configuration
 
@@ -92,3 +92,5 @@ export NVM_DIR="/home/greg/.nvm"
 [ -f /home/greg/.travis/travis.sh ] && source /home/greg/.travis/travis.sh
 
 xrandr --output VGA-1 --left-of VGA-0
+
+export GOPATH=$HOME/go

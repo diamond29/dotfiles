@@ -77,6 +77,7 @@ NeoBundle "majutsushi/tagbar"
 NeoBundle 'schickling/vim-bufonly'
 NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'rking/ag.vim'
+NeoBundle 'fatih/vim-go'
 
 "" Include user's extra bundle
 "if filereadable(expand("~/.vimrc.local.bundles"))
@@ -445,8 +446,6 @@ noremap q <NOP>
 
 " Save things more quickly
 noremap <leader>w :redraw!<CR>:w<CR>
-
-execute pathogen#infect()
 
 if &diff
   "setup vimdiff
