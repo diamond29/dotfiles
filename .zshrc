@@ -94,3 +94,4 @@ export NVM_DIR="/home/greg/.nvm"
 xrandr --output VGA-1 --left-of VGA-0
 
 export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
