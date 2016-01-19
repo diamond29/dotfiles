@@ -2,7 +2,7 @@ require 'rake'
 require 'fileutils'
 
 desc "Just move dot files"
-task :default => :move_dot_files
+task :default => [:move_dot_files, :setup_neovim]
 
 desc "Install all tools"
 task :install_tools => [:install_pyenv, :install_npm, :install_vim]
@@ -16,6 +16,16 @@ task :move_dot_files do
       File.symlink(File.expand_path(file), destination)
     end
   end
+end
+
+# https://wiki.archlinux.org/index.php/Neovim
+desc "setup neovim"
+task :setup_neovim do
+  sh(
+    'mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config} && '\
+    'ln -f -s ~/.vim $XDG_CONFIG_HOME/nvim && '\
+    'ln -f -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim'
+  )
 end
 
 desc "Install pyenv for python"

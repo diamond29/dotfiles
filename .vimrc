@@ -58,9 +58,6 @@ NeoBundle 'honza/vim-snippets'
 "" Color
 NeoBundle 'tomasr/molokai'
 
-"" Vim-Bootstrap Updater
-NeoBundle 'sherzberg/vim-bootstrap-updater'
-
 let g:vim_bootstrap_langs = "ruby"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
 
