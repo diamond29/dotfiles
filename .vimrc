@@ -455,3 +455,4 @@ else
 endif
 
 set mouse=a
+set clipboard+=unnamedplus
