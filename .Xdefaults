@@ -25,6 +25,7 @@ URxvt.loginShell:           true
 URxvt.saveLines:            4000
 URxvt.internalBorder:       3
 URxvt.lineSpace:            0
+URxvt.letterSpace:          -1
  
 ! Fonts
 /* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
@@ -67,5 +68,5 @@ URxvt.pointerBlank:         true
 
 URxvt.perl-ext-common: font-size
 
-URxvt.keysym.C-Down: perl:font-size:decrease
-URxvt.keysym.C-Up:font-size:increase
+URxvt.keysym.C-Down: perl:font-size:incglobal
+URxvt.keysym.C-Up:font-size:decglobal
