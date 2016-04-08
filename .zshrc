@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/greg/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -91,7 +91,12 @@ export NVM_DIR="/home/greg/.nvm"
 # added by travis gem
 [ -f /home/greg/.travis/travis.sh ] && source /home/greg/.travis/travis.sh
 
-xrandr --output VGA-1 --left-of VGA-0
-
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export PATH=/usr/local/bin:usr/bin:/bin:/usr/sbin:/sbin:${PATH}
+eval $(docker-machine env)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+bindkey -e
+
+source "$HOME/.zshrc.local"
