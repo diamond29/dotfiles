@@ -57,7 +57,7 @@ NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 
 "" Color
-NeoBundle 'tomasr/molokai'
+NeoBundle 'altercation/vim-colors-solarized'
 
 let g:vim_bootstrap_langs = "ruby"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
@@ -139,7 +139,7 @@ set number
 
 let no_buffers_menu=1
 if !exists('g:not_finsh_neobundle')
-  colorscheme molokai
+  colorscheme solarized
 endif
 
 set mousemodel=popup
@@ -191,7 +191,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'solarized'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -459,3 +459,4 @@ set mouse=a
 set clipboard+=unnamedplus
 set backspace=indent,eol,start
 set shortmess=Ot
+set ttymouse=xterm2
