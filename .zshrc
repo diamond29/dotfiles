@@ -53,7 +53,7 @@ plugins=(git bundler archlinux rake-fast)
 
 # User configuration
 
-  export PATH="/home/greg/.pyenv/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/greg/.rvm/bin:/home/greg/bin/"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/greg/.rvm/bin:/home/greg/bin/"
 export PATH="/usr/local/bin:usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -83,6 +83,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/bin"
 
 export NVM_DIR="/home/greg/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -98,3 +99,8 @@ export NVM_DIR="$HOME/.nvm"
 bindkey -e
 
 source "$HOME/.zshrc.local"
+export PATH="/Users/greg/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+eval "$(direnv hook zsh)"

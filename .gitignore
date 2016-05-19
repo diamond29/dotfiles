@@ -1,2 +1,4 @@
 .vim
 .rake_tasks
+.envrc
+.projections.json

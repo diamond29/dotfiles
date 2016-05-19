@@ -36,7 +36,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "*****************************************************************************
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-fugitive', { 'augroup' : 'fugitive'}
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
@@ -350,9 +350,10 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_aggregate_errors = 1
 
 "" Copy/Paste/Cut
-if has('unnamedplus')
-  set clipboard=unnamed,unnamedplus
-endif
+" if has('unnamedplus')
+"   set clipboard=unnamed,unnamedplus
+" endif
+set clipboard=unnamed
 
 noremap YY "+y<CR>
 noremap P "+gP<CR>
@@ -456,7 +457,6 @@ else
 endif
 
 set mouse=a
-set clipboard+=unnamedplus
 set backspace=indent,eol,start
 set shortmess=Ot
 set ttymouse=xterm2

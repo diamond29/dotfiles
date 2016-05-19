@@ -12,3 +12,5 @@
   default = simple
 [merge]
   tool = vimdiff
+[core]
+	excludesfile = /Users/greg/.gitignore
