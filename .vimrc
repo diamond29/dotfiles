@@ -325,9 +325,8 @@ noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 "" ctrlp.vim
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|tox)$'
-let g:ctrlp_user_command = "find %s -type f | grep -Ev '"+ g:ctrlp_custom_ignore +"'"
+set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__,*.otf,*.mp3,*.jpg
+let g:ctrlp_custom_ignore = 'node_modules\|\v[\/]\.(git|hg|svn|tox)$'
 let g:ctrlp_use_caching = 0
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 noremap <leader>b :CtrlPBuffer<CR>

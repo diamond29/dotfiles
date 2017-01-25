@@ -93,7 +93,7 @@ export NVM_DIR="/home/greg/.nvm"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-eval $(docker-machine env)
+eval $(docker-machine env default)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 bindkey -e
